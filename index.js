@@ -15,10 +15,10 @@ app.get('/herois/:id', function(req, res){
 })
 app.use(express.json())
 app.post('/herois', function (req,res){
-    //let novoHeroi = req.body.chuchu
-    herois.push(req.body.chuchu)
+    let novoHeroi = req.body.nome
+    herois.push(req.body.nome)
     herois.push(req.body.asd)
-    res.send(`ok ${req.body.chuchu}`)
+    res.send(`ok ${req.body.nome}`)
 })
 
 app.listen(3000) // definir porta do servidor para sair com a api
